@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "9b379142-d02c-4434-af58-2a971803b89d",
+		"name": "RETO-SPRINGWEFLUX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13220914"
+	},
+	"item": [
+		{
+			"name": "MONEDA",
+			"item": [
+				{
+					"name": "GET MONEDAS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDg0ODA0MCwiZXhwIjoxNjg0ODUzNjQwfQ.5jzQIvpCnEacaTPy6RH8KszMqer97T_nLqnAug-Oi-_YMl3pndjXfRgkDyHBQ0nxB016Rtd9a9yN8jU-YRa8AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/monedas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"monedas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MONEDA POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/monedas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"monedas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE MONEDA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDc0NzY0NCwiZXhwIjoxNjg0NzUzMjQ0fQ.LLKu3CElY5SzqnA-yhUi6wU4YdVZqMEzommBtIdHrqW-iS2YmCPcfnZ2Vn_B8lubpjmw3TTex4TuBeMlvElN9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Euro\",\r\n    \"simbolo\": \"Є \",\r\n    \"codigo\": \"EUR\",\r\n    \"pais\": \"ESPAÑA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/monedas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"monedas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MONEDA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"646a87f049092a6cfc6ba06d\",\r\n    \"nombre\": \"Dolar editado estadounidense\",\r\n    \"simbolo\": \"$ \",\r\n    \"codigo\": \"DOL\",\r\n    \"pais\": \"ESTADOS UNIDOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/monedas/646a87f049092a6cfc6ba06d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"monedas",
+								"646a87f049092a6cfc6ba06d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MONEDA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/monedas/646a87f049092a6cfc6ba06d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"monedas",
+								"646a87f049092a6cfc6ba06d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MONEY_CONVERTER",
+			"item": [
+				{
+					"name": "GET MONEDAS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDgxNjk1MCwiZXhwIjoxNjg0ODIyNTUwfQ.w7ByoGF7kjvNCKPHENYEyS5bHde635yxVYZvdUJRdoDZ96M2DH2gM2q0jJV4Df6uArCGx1LN2SGPvJJ77u1dDQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/money_converters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"money_converters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MONEDA POR ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE MONEDA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDg1NjQ2MiwiZXhwIjoxNjg0ODYyMDYyfQ.E-8zKGJYHBkulPRVbFYZi8ii3R7Pm0NP0drgpIOpjHbkR-2HQHNVVB7CkpZKeubk4hRb2Ob4uC4FBmyqWa7v3w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoCambio\": {\r\n        \"id\":\"646aed93f668b3605ea2e483\"\r\n    },\r\n    \"montoOrigen\": 726.54,\r\n    \"montoCambiado\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v2/money_converters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"money_converters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MONEDA",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MONEDA",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TIPOS_CAMBIO",
+			"item": [
+				{
+					"name": "GET TIPOS_CAMBIO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDg1NjQ2MiwiZXhwIjoxNjg0ODYyMDYyfQ.E-8zKGJYHBkulPRVbFYZi8ii3R7Pm0NP0drgpIOpjHbkR-2HQHNVVB7CkpZKeubk4hRb2Ob4uC4FBmyqWa7v3w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/tipos_cambio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"tipos_cambio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MONEDA POR ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDg1Njk1MSwiZXhwIjoxNjg0ODYyNTUxfQ.gfyGKkCfysrx0P7Q8ZZUmEOoo3glboMOqMlwmJoglGeeNI9K-GodoUdd5UxL6KxjJgiwgWcHg8XR9kEf5xNBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/tipos_cambio/646aed93f668b3605ea2e483",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"tipos_cambio",
+								"646aed93f668b3605ea2e483"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE TIPOS_CAMBIO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDcyOTEyMCwiZXhwIjoxNjg0NzM0NzIwfQ.bdU7K-NY6YT8NWpwTW5IRKQM_eUY4ZbBmN4wLVXU4H7IJNvj5NjQqhXzlrSXyQrOpTr2WGz_mASsXUYDXbr2eA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"monedaOrigen\": {\r\n        \"id\": \"646ae5492bb2813d8621d570\"\r\n    },\r\n    \"monedaDestino\": {\r\n        \"id\": \"646a88164652a21b9580eb49\"\r\n    },\r\n    \"valorCambio\": 0.2753,\r\n    \"fecha\": \"2021-07-01 12:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tipos_cambio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipos_cambio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MONEDA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDg1Njk1MSwiZXhwIjoxNjg0ODYyNTUxfQ.gfyGKkCfysrx0P7Q8ZZUmEOoo3glboMOqMlwmJoglGeeNI9K-GodoUdd5UxL6KxjJgiwgWcHg8XR9kEf5xNBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": null,\r\n    \"createdDate\": null,\r\n    \"lastModifiedBy\": null,\r\n    \"lastModifiedDate\": null,\r\n    \"id\": \"646aed93f668b3605ea2e483\",\r\n    \"monedaOrigen\": {\r\n        \"id\": \"646ae5492bb2813d8621d570\"\r\n    },\r\n    \"monedaDestino\": {\r\n        \"id\": \"646a88164652a21b9580eb49\"\r\n    },\r\n    \"valorCambio\": 0.2853,\r\n    \"fecha\": \"2021-07-01 12:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v2/tipos_cambio/646aed93f668b3605ea2e483",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"tipos_cambio",
+								"646aed93f668b3605ea2e483"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MONEDA",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USUARIO",
+			"item": [
+				{
+					"name": "GET USUARIOS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDgxNjk1MCwiZXhwIjoxNjg0ODIyNTUwfQ.w7ByoGF7kjvNCKPHENYEyS5bHde635yxVYZvdUJRdoDZ96M2DH2gM2q0jJV4Df6uArCGx1LN2SGPvJJ77u1dDQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USUARIO POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"$2a$12$K1ZiJRr6ZVVjnLoAQxmr/OXpvNOv4V0fusSngTr2buf7Bo0zBrhzK\",\r\n    \"status\": true,\r\n    \"roles\": [\r\n        {\r\n            \"id\": \"646a8ec9bcd04a01ae690a23\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USUARIO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USUARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ROL",
+			"item": [
+				{
+					"name": "GET ROLES",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDgxNjk1MCwiZXhwIjoxNjg0ODIyNTUwfQ.w7ByoGF7kjvNCKPHENYEyS5bHde635yxVYZvdUJRdoDZ96M2DH2gM2q0jJV4Df6uArCGx1LN2SGPvJJ77u1dDQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v2/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ROL POR ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/roles/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SAVE ROL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDc0NjQ0NywiZXhwIjoxNjg0NzUyMDQ3fQ.Vb45nLS3zaVdtTKB8v6WRyaCGM1XyxOgL0b0BFC-ZflaNXvkslEj7HMia2-lQnybjNzjZVHFzQguIClV7h99sQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DBA6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ROL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ0ZXN0IjoidmFsdWUtZGVtbyIsInJvbGVzIjpbIkFETUlOIl0sInVzZXJuYW1lIjoiamNlZGVub24iLCJzdWIiOiJqY2VkZW5vbiIsImlhdCI6MTY4NDc0NDIxOCwiZXhwIjoxNjg0NzQ5ODE4fQ.YkhOmmNoL3roD3-CuGujpEwhoO21-rx3qUpmTblc2d9umaWVLFEY-8iDDtL7r820Lw6uEwoFgYY67ak8PVoo3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": null,\r\n    \"createdDate\": \"22/05/23 03:30\",\r\n    \"lastModifiedBy\": null,\r\n    \"lastModifiedDate\": \"22/05/23 03:30\",\r\n    \"id\": \"646b2826e0c3f701139da211\",\r\n    \"name\": \"DBA3-editado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/roles/646b2826e0c3f701139da211",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"646b2826e0c3f701139da211"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ROL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/rol",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rol"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jcedenon\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
